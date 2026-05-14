@@ -20,6 +20,9 @@ def main():
     config = OmniMemoryConfig()
     config.embedding.model_name = "all-MiniLM-L6-v2"  # Local embedding (no API needed)
     config.embedding.embedding_dim = 384
+    config.llm.summary_model = "qwen/qwen3.5-122b-a10b"
+    config.llm.query_model = "qwen/qwen3.5-122b-a10b"
+    config.llm.caption_model = "qwen/qwen3.5-122b-a10b"
 
     # 2. Initialize orchestrator
     orchestrator = OmniMemoryOrchestrator(
